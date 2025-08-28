@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Корзина-тетрис</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<a class="brand-logo" href="#" aria-label="Логотип компании">
+  <img src="logo.png" alt="Компания" />
+</a>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>Корзина-тетрис</h1>
+      <p class="subtitle">Уложите все товары в корзину так, чтобы не осталось пустого места. Помните, что после добавления товара в корзину его нельзя убрать!</p>
+    </header>
+
+    <main class="stage">
+    <section
+    class="basket"
+    id="basket"
+    aria-label="Корзина"
+    data-cols="6"
+    data-rows="6"
+    >
+
+        <div class="basket-wire" aria-hidden="true"></div>
+        <div class="grid" aria-hidden="true"></div>
+
+        <div class="placed" id="placed"></div>
+
+        <div class="cart-decor" aria-hidden="true">
+          <div class="axle"></div>
+          <div class="wheel w1"></div>
+          <div class="wheel w2"></div>
+          <div class="handle"></div>
+        </div>
+        
+        <div class="basket-controls">
+            <button id="clear-basket" class="btn danger" type="button" disabled>
+            Очистить корзину
+            </button>
+        </div>
+        <div class="win-banner" id="win-banner" aria-hidden="true">
+          <div class="win-card">
+            <div class="win-title">Готово! Все товары поместились 🎉</div>
+            <div class="win-actions">
+              <button id="win-restart" class="btn">Сыграть ещё</button>
+              <button id="win-close" class="btn outline">Закрыть</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <aside class="inventory" aria-label="Товары">
+        <h2 class="inv-title">Товары</h2>
+
+        <div class="pieces">
+  <button class="piece bread" style="--w:5; --h:1" data-name="Багет 5×1" aria-label="Багет 5×1">
+    <span class="emoji">🥖</span><span class="label"></span>
+  </button>
+
+
+
+  <button class="piece milk" style="--w:1; --h:2" data-name="Молоко A 1×2" aria-label="Молоко 1×2">
+    <span class="emoji">🥛</span><span class="label"></span>
+  </button>
+
+  <button class="piece fish" style="--w:4; --h:1" data-name="Филе A 4×1" aria-label="Филе 4×1">
+    <span class="emoji">🐟</span><span class="label"></span>
+  </button>
+  <button class="piece fish" style="--w:4; --h:1" data-name="Филе B 4×1" aria-label="Филе 4×1">
+    <span class="emoji">🍌</span><span class="label"></span>
+  </button>
+  <button class="piece milk" style="--w:1; --h:2" data-name="Молоко B 1×2" aria-label="Молоко 1×2">
+    <span class="emoji">🍒</span><span class="label"></span>
+  </button>
+
+  <button class="piece fruit" style="--w:2; --h:1" data-name="Фрукты 2×1" aria-label="Фрукты 2×1">
+    <span class="emoji">🍊</span><span class="label"></span>
+  </button>
+
+  <button class="piece can" style="--w:1; --h:1" data-name="Банка A 1×1" aria-label="1×1">
+    <span class="emoji">🥫</span><span class="label"></span>
+  </button>
+  <button class="piece mayo" style="--w:1; --h:1" data-name="Банка B 1×1" aria-label="1×1">
+    <span class="emoji">🧴</span><span class="label"></span>
+  </button>
+  <button class="piece milk" style="--w:1; --h:2" data-name="Молоко C 1×2" aria-label="Молоко 1×2">
+    <span class="emoji">🧃</span><span class="label"></span>
+  </button>
+
+  <button class="piece chicken" style="--w:3; --h:2" data-name="Курица 3×2" aria-label="Курица 3×2">
+    <span class="emoji">🍗</span><span class="label"></span>
+  </button>
+
+  <button class="piece cheese" style="--w:2; --h:2" data-name="Сыр 2×2" aria-label="Сыр 2×2">
+    <span class="emoji">🧀</span><span class="label"></span>
+  </button>
+  <button class="piece bottle" style="--w:1; --h:3" data-name="Бутылка 1×3" aria-label="Бутылка 1×3">
+    <span class="emoji">🍾</span><span class="label"></span>
+  </button>
+</div>
+      </aside>
+    </main>
+  </div>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
